@@ -1,1 +1,1 @@
-# PCP_Subcellular_Potts_Model
+# A Subcellular Potts Model for Planar Cell Polarity 
