@@ -25,7 +25,7 @@ LamV=12         #Lambda Volume
 tV=144          #Target Volume (tV=169 for hexagonal lattice)
 #
 #SUBCELLULAR PARAMETERS:
-#volume fractions (defined such that the surface is equally populated by proximal, distal and lateral domains)
+#volume fractions 
 pP=0.15        #Proximal domain (for square lattice)
 pD=0.15        #Distal domain (for square lattice)
 pC=0.5         #Cytoplamsic domain (for square lattice)
