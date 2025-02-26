@@ -1029,13 +1029,13 @@ class UniformGrowthSteppable(SteppableBasePy):
                             #assign the target volume to each cell compartment
                             for cell in self.get_cluster_cells(int(cluster_to_grow)):                        
                                 if(cell.type==self.CYTO):
-                                    cell.targetVolume = (cluster_volume - 0.99*1.5*S)
+                                    cell.targetVolume = (cluster_volume - 1.5*S)
                                 elif (cell.type==self.PROX2):
-                                    cell.targetVolume = 0.33*1.5*S
+                                    cell.targetVolume = 0.45*S
                                 elif (cell.type==self.DIST2):
-                                    cell.targetVolume = 0.33*1.5*S
+                                    cell.targetVolume = 0.45*S
                                 elif (cell.type==self.LAT):
-                                    cell.targetVolume = 0.33*1.5*S  
+                                    cell.targetVolume = 0.6*S  
                                     
                 else:
                     # If no specific start time is assigned, grow normally
