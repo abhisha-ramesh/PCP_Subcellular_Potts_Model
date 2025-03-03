@@ -719,23 +719,24 @@ class VectorField(SteppableBasePy):
         SteppableBasePy.__init__(self,_frequency)
         
     def step(self,mcs):
-        # Lists to store vector field data
-        self.X = []; self.Y = []; self.X_com = []; self.Y_com = []; 
+        if (mcs>=10000):
+            # Lists to store vector field data
+            self.X = []; self.Y = []; self.X_com = []; self.Y_com = []; 
 
-        for cell in self.cell_list_by_type(self.CYTO):
-            if (cell.dict["Pol"]!=0):   # Only process cells with nonzero polarity
-                x = cell.dict['Ang-x']; y = cell.dict['Ang-y']  # Retrieve x and y-components of polarity
+            for cell in self.cell_list_by_type(self.CYTO):
+                if (cell.dict["Pol"]!=0):   # Only process cells with nonzero polarity
+                    x = cell.dict['Ang-x']; y = cell.dict['Ang-y']  # Retrieve x and y-components of polarity
                 
-                # Store the componenets of polarity vectors along with cell center of masses
-                self.Y.append(-y)
-                self.X.append(-x)
-                self.Y_com.append(cell.yCOM)
-                self.X_com.append(cell.xCOM)
+                    # Store the componenets of polarity vectors along with cell center of masses
+                    self.Y.append(-y)
+                    self.X.append(-x)
+                    self.Y_com.append(cell.yCOM)
+                    self.X_com.append(cell.xCOM)
                 
-        # Open a file in the simulation output folder to store vector field data
-        output_file, path__ = self.open_file_in_simulation_output_folder("vector_field_data_"+str(mcs)+".txt", mode='w')
-        for i in range(len(self.X)):
-            output_file.write('{} {} {} {}\n'.format(self.X_com[i],self.Y_com[i],self.X[i],self.Y[i]))                       
+            # Open a file in the simulation output folder to store vector field data
+            output_file, path__ = self.open_file_in_simulation_output_folder("vector_field_data_"+str(mcs)+".txt", mode='w')
+            for i in range(len(self.X)):
+                output_file.write('{} {} {} {}\n'.format(self.X_com[i],self.Y_com[i],self.X[i],self.Y[i]))                       
                 
         
 class GraphPol_x_Dist(SteppableBasePy):
@@ -759,7 +760,7 @@ class GraphPol_x_Dist(SteppableBasePy):
         
     def step(self,mcs):
         # The method iterates through distance bins and computes polarity correlations at each time step
-        if (mcs>0):
+        if (mcs>10000):
             L=[]; Lcells=[] #Optimized Algoritm (20x faster)
 
             # Store center of mass, ID and polarity properties of CYTO cells
