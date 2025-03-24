@@ -1,3 +1,16 @@
+"""
+Code for Sub-cellular Potts Model for Planar Cell Polarity
+
+Part of the paper
+"Start Small: A Sub-cellular Potts Model for Tissue-wide Planar Cell Polarity without Morphogens"
+Abhisha Thayambath and Julio M Belmonte
+
+Code written by Abhisha Thayambath and Julio Monti Belmonte
+Department of Physics, North Carolina State University
+
+[Modified on 03/24/2025]
+
+"""
 from cc3d.cpp.PlayerPython import * 
 from cc3d import CompuCellSetup
 from cc3d.core.PySteppables import *
