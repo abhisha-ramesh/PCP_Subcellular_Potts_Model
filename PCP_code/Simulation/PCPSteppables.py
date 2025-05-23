@@ -2,7 +2,7 @@
 Code for Sub-cellular Potts Model for Planar Cell Polarity
 
 Part of the paper
-"Start Small: A Sub-cellular Potts Model for Tissue-wide Planar Cell Polarity without Morphogens"
+"Start Small: A Model for Tissue-wide Planar Cell Polarity without Morphogens"
 Abhisha Thayambath and Julio M Belmonte
 
 Code written by Abhisha Thayambath and Julio Monti Belmonte
