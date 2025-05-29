@@ -1,4 +1,4 @@
-# A Subcellular Potts Model for Planar Cell Polarity 
+# A Model for Planar Cell Polarity without Morphogens
 This project simulates Planar Cell Polarity using Cellular Potts Model (aka Glazier-Graner-Hogeweg Model) using the CompuCell3D(CC3D) (Version 4.2.3) simulation software. The model investigates conditions under which tissue-wide polarity can be established in the absence of a long-range morphogen gradient. This simulation is part of the research presented in the paper "Start Small: A Model for Tissue-wide Planar Cell Polarity without Morphogens" by Abhisha Thayambath and Julio M. Belmonte. This README file provides instructions on how to setup, run and modify this simulation using CC3D simulation environment.
 
 ## Installing CC3D
