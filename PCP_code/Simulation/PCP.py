@@ -20,8 +20,8 @@ global E_pd, E_dd, E_pp, E_ll, E_lp, E_ld, E_ml, E_mp, E_md, E_mm, E_mc, E_mt, E
 global J_pd, J_other
 
 #PARAMETERS:
-#volume of each cell=144 for square lattice and volume=169 for hexagonal lattice.
-cd=12           #Typical cell diameter (cd=13 for hexagonal lattice)
+#volume of each cell=144 lattice sites
+cd=12           #Typical cell diameter 
 nx = 4          #Number of cells along x-direction
 ny = 4          #Number of cells along y-direction
 Ly = nx*cd      #for periodic boundary 
@@ -30,23 +30,20 @@ Lx = nx*cd      #for periodic boundary
 #Lx = nx*cd + 20      #for left boundary signal configuration 
 #
 #POTTS PARAMETERS:
-T=15            #Temperature (T=20 for hexagonal lattice)
-nOrder_contact=4 #Distance of interaction (nOrder=3 for hexagonal lattice)
-nOrder_potts=3  #Distance of interaction (nOrder=2 for hexagonal lattice)
+T=15            #Temperature 
+nOrder_contact=4 #Distance of interaction 
+nOrder_potts=3  #Distance of interaction 
 Time=100000     #Total number of MCS
 #
 #VOLUME/SURFACE PARAMETERS:
 LamV=12         #Lambda Volume
-tV=144          #Target Volume (tV=169 for hexagonal lattice)
+tV=144          #Target Volume 
 #
 #SUBCELLULAR PARAMETERS:
 #volume fractions 
-pP=0.15        #Proximal domain (for square lattice)
-pD=0.15        #Distal domain (for square lattice)
-pC=0.5         #Cytoplamsic domain (for square lattice)
-# pP=0.142     # Proximal domain (for hexagonal lattice)
-# pD=0.142     #Distal domain (for hexagonal lattice)
-# pC=0.574     # Cytoplamsic domain (for hexagonal lattice)
+pP=0.15        #Proximal domain 
+pD=0.15        #Distal domain 
+pC=0.5         #Cytoplamsic domain 
 #
 #EXTERNAL CONTACT ENERGIES:
 E_pd = 7
