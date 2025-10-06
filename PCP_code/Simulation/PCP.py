@@ -56,7 +56,7 @@ E_ml = E_ll
 E_mp = 10
 E_md = E_mp
 E_mm = 0
-E_mc = 100
+E_mc = 30
 E_mt = 5
 E_tt = E_mt
 E_cc = 50
@@ -186,3 +186,4 @@ CompuCellSetup.register_steppable(steppable=GraphPol_x_Dist_left_boundary(1000,c
 CompuCellSetup.register_steppable(steppable=piff_generator(10000,Time,MCS0))                                    #Generates and stores .piff files
 CompuCellSetup.register_steppable(steppable=adhesion_fix(10))                                                   #Ensures proximal and distal compartments are spatially segregated inside each cell
 CompuCellSetup.run()
+
