@@ -24,9 +24,9 @@ global J_pd, J_other
 cd=12           #Typical cell diameter 
 nx = 4          #Number of cells along x-direction
 ny = 4          #Number of cells along y-direction
-Ly = nx*cd      #for periodic boundary 
+Ly = ny*cd      #for periodic boundary 
 Lx = nx*cd      #for periodic boundary 
-#Ly = nx*cd           #for left boundary signal configuration 
+#Ly = ny*cd           #for left boundary signal configuration 
 #Lx = nx*cd + 20      #for left boundary signal configuration 
 #
 #POTTS PARAMETERS:
@@ -186,4 +186,5 @@ CompuCellSetup.register_steppable(steppable=GraphPol_x_Dist_left_boundary(1000,c
 CompuCellSetup.register_steppable(steppable=piff_generator(10000,Time,MCS0))                                    #Generates and stores .piff files
 CompuCellSetup.register_steppable(steppable=adhesion_fix(10))                                                   #Ensures proximal and distal compartments are spatially segregated inside each cell
 CompuCellSetup.run()
+
 
